@@ -1,0 +1,109 @@
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+    
+}
+
+#alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Press Start 2P', 'VT323', monospace;
+    font-size: 48px;
+    color: white;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 #000,
+        2px 4px 0 #000,
+        4px 2px 0 #000;
+    background: none;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+#score {
+    margin-bottom: 4px;
+}
+
+#score-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 20px;
+    color: white;
+    z-index: 1000;
+    user-select: none;
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+#restart-arrow {
+    position: fixed;
+    top: 90px;
+    /* Adjust as needed to appear below "Game Over" */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    /* Adjust size as needed */
+    height: 64px;
+    z-index: 1001;
+    display: none;
+    cursor: pointer;
+    
+    user-select: none;
+}
+
+#background {
+    position: absolute;
+    background-image: url("Chromium_T-Rex-horizon.png");
+    height: 24px;
+    width: 100%;
+    animation: slideright 600s infinite linear;
+    bottom: 0;
+    filter: brightness(0) invert(1);
+}
+
+.dino {
+    background-image: url("dinalt.png");
+    height: 85px;
+    width: 118px;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    
+}
+
+.obstacle {
+    background-image: url("cact.png");
+    width: 50px;
+    height: 105px;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    filter: brightness(0) invert(1);
+}
+
+.grid {
+    position: relative;
+    z-index: 10;
+}
+
+body {
+    background: #181818;
+    /* Very dark gray, almost black */
+    /* Light text for contrast */
+}
+
+
+
